@@ -37,8 +37,8 @@ function swap(list, x, y) {
     }
 
     const x_next = x.next;
-    let x_prev = list.findWithPrevious((node) => node ===x)[1];
-    const y_prev = list.findWithPrevious((node) => node === y)[1];  
+    let x_prev = list.findWithPrevious((node) => node === x)[1]; // the [1] assures that this will be null if x is the head
+    const y_prev = list.findWithPrevious((node) => node === y)[1]; // // the [1] assures that this will be null if y is the head
 
     x.next = y.next; 
     y.next = x_next; 
